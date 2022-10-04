@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AcsCore" Version="1.0.0" />
+    <PackageReference Include="AcsCore" Version="1.0.1.1" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.3.5" />
   </ItemGroup>
 
