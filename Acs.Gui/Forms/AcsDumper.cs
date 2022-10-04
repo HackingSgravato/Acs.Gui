@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Security.Principal;
 using Acs.Core.Helpers;
 using Dumper = Acs.Core.Services.AcsDumper;
 
@@ -95,5 +96,15 @@ public partial class AcsDumper : Form
         }
 
         postDumpProcess();
+    }
+
+    private void AcsDumper_Load(object sender, EventArgs e)
+    {
+        bool isAdministrator = new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator);
+        
+        if (!isAdministrator)
+        {
+            MessageBox.Show("You need to run this program as administrator to dump processes.", "Acs", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

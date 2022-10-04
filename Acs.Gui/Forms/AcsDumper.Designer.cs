@@ -408,6 +408,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AcsDumper";
             this.Text = "AcsDumper";
+            this.Load += new System.EventHandler(this.AcsDumper_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
